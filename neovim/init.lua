@@ -26,6 +26,7 @@ vim.pack.add {
 	{ src = "https://github.com/sphamba/smear-cursor.nvim" },
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter-context" },
 	{ src = "https://github.com/manuuurino/autoread.nvim" },
 }
 
