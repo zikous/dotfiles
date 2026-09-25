@@ -2,7 +2,4 @@
 
 Neovim and tmux configs.
 
-```sh
-ln -s ~/Projects/dotfiles/neovim ~/.config/nvim
-ln -s ~/Projects/dotfiles/tmux/tmux.conf ~/.tmux.conf
-```
+Use `ln -s` to symlink the files to their places.
