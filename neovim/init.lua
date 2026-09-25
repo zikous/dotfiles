@@ -26,6 +26,7 @@ vim.pack.add {
 	{ src = "https://github.com/sphamba/smear-cursor.nvim" },
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+	{ src = "https://github.com/manuuurino/autoread.nvim" },
 }
 
 -- options
@@ -54,6 +55,11 @@ vim.api.nvim_create_autocmd({ "BufWinEnter", "BufEnter" }, {
 })
 
 -- plugin setup
+require("autoread").setup()
+-- autoread.nvim is per-buffer and off by default: enable it on every file
+vim.api.nvim_create_autocmd("BufReadPost", {
+	callback = function() vim.cmd("silent! AutoreadOn") end,
+})
 require("lualine").setup({
 	sections = {
 		lualine_x = { "encoding", "filetype" },
