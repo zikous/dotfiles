@@ -61,14 +61,15 @@ require("todo-comments").setup {}
 require("treesj").setup({ use_default_keymaps = false })
 require("autoread").setup()
 
+local bar = "┃"
 require("gitsigns").setup({
 	signs = {
-		add          = { text = "+" },
-		change       = { text = "~" },
-		delete       = { text = "_" },
-		topdelete    = { text = "‾" },
-		changedelete = { text = "~" },
-		untracked    = { text = "┆" },
+		add          = { text = bar },
+		change       = { text = bar },
+		delete       = { text = "▁" },
+		topdelete    = { text = "▔" },
+		changedelete = { text = bar },
+		untracked    = { text = bar },
 	},
 })
 
