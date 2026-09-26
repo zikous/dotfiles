@@ -7,6 +7,8 @@ o.number = true
 o.relativenumber = true
 o.cursorline = true
 o.signcolumn = "yes"
+-- line numbers first, then signs (git bar) next to the text
+o.statuscolumn = "%=%l%s"
 o.winborder = "rounded"
 o.termguicolors = true
 o.scrolloff = 8
