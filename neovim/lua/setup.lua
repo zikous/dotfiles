@@ -32,8 +32,7 @@ require("snacks").setup({
 	terminal = { enabled = true },
 	notifier = { enabled = true },
 	bigfile = { enabled = true },
-	input = { enabled = true },
-})
+	input = { enabled = true },})
 
 -- fix: snacks passes full path to devicons, breaking filename-only icons (folke/snacks.nvim#2597)
 -- TODO: remove this patch once the upstream issue is fixed

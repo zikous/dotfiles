@@ -32,8 +32,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local function map(lhs, rhs, desc)
 			vim.keymap.set("n", lhs, rhs, { buffer = ev.buf, desc = desc })
 		end
-		map("gr", Snacks.picker.lsp_references, "References")
-		map("gi", Snacks.picker.lsp_implementations, "Implementations")
+		map("<leader>gd", Snacks.picker.lsp_definitions, "Definition")
+		map("<leader>gD", Snacks.picker.lsp_declarations, "Declaration")
+		map("<leader>gr", Snacks.picker.lsp_references, "References")
+		map("<leader>gi", Snacks.picker.lsp_implementations, "Implementations")
 		map("<leader>rn", vim.lsp.buf.rename, "Rename")
 		map("<leader>ca", vim.lsp.buf.code_action, "Code action")
 		map("<leader>e", vim.diagnostic.open_float, "Line diagnostics")
