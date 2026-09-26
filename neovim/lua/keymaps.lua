@@ -1,6 +1,8 @@
 local map = vim.keymap.set
 local gitsigns = require("gitsigns")
 
+map("n", "<Esc>", "<Cmd>nohlsearch<CR>")
+
 -- find
 map("n", "<leader>ff", Snacks.picker.files, { desc = "Files" })
 map("n", "<leader>fg", Snacks.picker.grep, { desc = "Grep" })
